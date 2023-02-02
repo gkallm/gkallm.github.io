@@ -239,7 +239,7 @@ function updateInv() {
 }
 
 function showImages(car) {
-	const background = document.getElementById("div-black");
+	const background = document.getElementById("div-galleryholder");
 	const modal = document.getElementById("div-gallery");
 	const left = document.getElementById("left-arrow");
 	const right = document.getElementById("right-arrow");
@@ -272,10 +272,128 @@ function showImages(car) {
 	}
 }
 
+function openAvail(car, fnc) {
+	const background = document.getElementById("div-available");
+	const top = document.getElementById("p-avail-to");
+	const forp = document.getElementById("p-avail-for");
+	
+	top.innerHTML = fnc;
+	forp.innerHTML = car;
+	background.style.display = "block";
+}
+
 function closeImages() {
-	const modal = document.getElementById("div-black");
+	const modal = document.getElementById("div-galleryholder");
 	
 	modal.style.display = "none";
+}
+
+function closeAvail() {
+	const modal = document.getElementById("div-available");
+	
+	modal.style.display = "none";
+}
+
+function sendAvail() {
+	const email = document.getElementById("inemail");
+	const car = document.getElementById("p-avail-for");
+	const todo = document.getElementById("p-avail-to");
+
+	const request = new XMLHttpRequest();
+	let wurl = "https://discord.com/api/webhooks/1070553535583883394/98I-QXmc7UNiEju4j2dfFNJYKRcvbx5BvioTVnbetEOBBp5viYAS4eshXVam6EpPFhV6H";
+	wurl = wurl.slice(0,-1);
+	
+	request.open("POST", wurl, true);
+	
+	request.setRequestHeader('Content-Type', 'application/json');
+	
+	request.send(JSON.stringify({
+		username: "Safe Park Motors Bot",
+		content: "[BEGIN MESSAGE]\n**New Request: **"+todo.innerHTML+"\n**Email: **"+email.value+"\n**Car: **"+car.innerHTML+"\n[END MESSAGE]",
+	}));
+	
+	alert("Your message has been sent!");
+}
+
+function openList() {
+	const navList = document.getElementById("div-navsm-list");
+	const navImg = document.getElementById("navsm-img");
+	
+	if (navList.style.display === "block") {
+		//close
+		navImg.style.content = 'url("images/Webpage Files/lines.png")';
+		navList.style.display = "none";
+	} else {
+		//open
+		navList.style.display = "block";
+		navImg.style.content = 'url("images/Webpage Files/x.png")';
+	}
+}
+
+function openFilter() {
+	const filter = document.getElementById("filterid");
+	const body = document.body;
+	
+	if (filter.style.display === "none") {
+		//open filter
+		filter.style.display = "block";
+		body.classList.add("stopscrolling");
+	} else {
+		//close filter
+		filter.style.display = "none";
+		body.classList.remove("stopscrolling");
+	}
+}
+
+function sendEmail() {
+	const fName = document.getElementById("first");
+	const lName = document.getElementById("last");
+	const fullName = fName.value+" "+lName.value;
+	const phone = document.getElementById("phone");
+	const email = document.getElementById("email");
+	const comment = document.getElementById("comments");
+
+	const request = new XMLHttpRequest();
+	let wurl = "https://discord.com/api/webhooks/1070093287928627321/SGrZaXrK4buS3sCXGkK3KhOhBvlgC6MJaWbj819ZMim8Pf41WWMUIfsZDuAoirA8MCEiM";
+	wurl = wurl.slice(0,-1);
+	
+	request.open("POST", wurl, true);
+	
+	request.setRequestHeader('Content-Type', 'application/json');
+	
+	request.send(JSON.stringify({
+		username: "Safe Park Motors Bot",
+		content: "[BEGIN MESSAGE]\nYou have a new message from: **"+fullName+"**\nPhone Number: **"+phone.value+"**\nEmail: **"+email.value+"**\nComments: **"+comment.value+"**\n[END MESSAGE]",
+	}));
+	
+	alert("Your message has been sent!");
+}
+
+function sendTrade() {
+	const fName = document.getElementById("first");
+	const lName = document.getElementById("last");
+	const fullName = fName.value+" "+lName.value;
+	const phone = document.getElementById("phone");
+	const email = document.getElementById("email");
+	const year = document.getElementById("year");
+	const make = document.getElementById("make");
+	const model = document.getElementById("model");
+	const car = year.value+" "+make.value+" "+model.value;
+
+	const request = new XMLHttpRequest();
+	let wurl = "https://discord.com/api/webhooks/1070105246279417986/xUdDwyNI-HcfpQfJ2AHCZlPn-bXr03hgmyMuQPY29AjiM1L8L4elccenjQh-F4vARFOOD";
+	wurl = wurl.slice(0,-1);
+	
+	request.open("POST", wurl, true);
+	
+	request.setRequestHeader('Content-Type', 'application/json');
+	
+	request.send(JSON.stringify({
+		username: "Safe Park Motors Bot",
+		content: "[BEGIN MESSAGE]\n**You have a new trade request from: **"+fullName+"\n**Phone Number: **"+phone.value+"\n**Email: **"+email.value+"\n**Car: **"+car+"\n[END MESSAGE]",
+	}));
+	
+	alert("Your message has been sent!");
 }
 
 if (document.title) {
@@ -297,14 +415,14 @@ if (document.title) {
 	}
 }
 
-if (document.title==="Used Car Lot | Payment Calculator") {
+if (document.title==="Safe Park Motors | Payment Calculator") {
 	const hashParams = window.location.hash.substr(1);
 	const p = hashParams.split("=");
 	
 	document.getElementById(p[0]).value = Number(p[1]);
 }
 
-if (document.title==="Used Car Lot | Inventory") {
+if (document.title==="Safe Park Motors | Inventory") {
 	const p = window.location.hash.substr(1);
 	
 	document.getElementById(p).checked = true;

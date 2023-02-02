@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <!-- InstanceBeginEditable name="doctitle" -->
 <meta name="description" content="inventory page">
-<title>Used Car Lot | Inventory</title>
+<title>Safe Park Motors | Inventory</title>
 <!-- InstanceEndEditable -->
+<link href="images/Webpage%20Files/car%20Icon.png" rel="icon" type="image/x-icon">
 <link href="sheets.css" rel="stylesheet" type="text/css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,20 +22,49 @@
 
 <body>
 	<nav class="accent" id="navreg">
-		<a href="index.html"><img src="images/Logo_Transparent.png" alt="Safe Park Motors Logo" class="logo-nav"></a><!-- InstanceBeginEditable name="EditRegion6" -->
+		<a href="index.html"><img src="images/Webpage%20Files/Logo_Transparent_4.png" alt="Safe Park Motors Logo" class="logo-nav"></a><!-- InstanceBeginEditable name="EditRegion6" -->
         <ul class="nav-list">
         	<a href="index.html"><li>Home</li></a>
 			<a href="inventory.html"><li class="active">Inventory</li></a>
 			<a href="sell.html"><li>Trade In</li></a>
 			<a href="about.html"><li>About Us</li></a>
         </ul>
+	</nav>
+	<nav class="accent" id="navsm">
+		<img src="#" alt="#" onClick="openList()" id="navsm-img">
+		<div id="div-navsm-list" class="accent">
+			<ul class="navsm-list">
+        		<a href="../index.html"><li class="active">Home</li></a>
+				<a href="../inventory.html"><li>Inventory</li></a>
+				<a href="../sell.html"><li>Trade In</li></a>
+				<a href="../about.html"><li>About Us</li></a>
+       		</ul>
+		</div>
         <!-- InstanceEndEditable --></nav>
 	<!-- InstanceBeginEditable name="EditRegion3" -->
-    
+    <div id="div-available">
+		<div id="div-dark" onClick="closeAvail()"></div>
+		<div id="div-avform">
+			<label for="text" class="center" id="lblemail">Email:</label>
+			<br>
+			<input type="text" class="center" id="inemail">
+			<br>
+			<br>
+			<br>
+			<input type="submit" class="submit submitplus center" onClick="sendAvail('2020 Chrysler 300 Limited')">
+			<p id="p-avail-to" class="inv">to: </p>
+			<p id="p-avail-for" class="inv">for: </p>
+		</div>
+	</div>
+	
+	
 	<br>
 	<div id="div-aboveInv">
 		<div class="div-filter" id="div-clear">	
 			<a onClick="clearFilter()" id="clear-filter">Clear filter</a>
+		</div>
+		<div class="div-openfilter">
+			<a onClick="openFilter()" id="open-filter">Filter</a>
 		</div>
 			<div id="div-sort">
 				<select id="sortby" onChange="sortBy()">
@@ -48,7 +78,7 @@
 			</div>
 		</div>
 	<div id="div-inventory">
-		<aside class="div-filter">
+		<aside class="div-filter" id="filterid">
 				<details id="det-make">
 					<summary>Make</summary>
 					<div class="div-checkboxes"> <!--alphabetize later -->
@@ -175,8 +205,8 @@
 						</table>
 						<div class="div-car-btn">
 							<a href="payment.html#m-price=29375"><p class="p-loan">Calculate Monthly Payment</p></a>
-							<a href="#"><button class="btn-car btn-info">More Information</button></a>
-							<a href="mailto:201044@student.goddardusd.com"><button class="btn-car btn-ask">Ask For Availability</button></a>
+							<a href="2020 Chrysler 300 Limited.html"><button class="btn-car btn-info">More Information</button></a>
+							<button class="btn-car btn-ask" onClick="openAvail('2020 Chrysler 300 Limited', 'Check Availability')">Ask For Availability</button>
 						</div>
 					</div>
 				</div>
@@ -207,8 +237,8 @@
 						</table>
 						<div class="div-car-btn">
 							<a href="payment.html#m-price=29375"><p class="p-loan">Calculate Monthly Payment</p></a>
-							<a href="#"><button class="btn-car btn-info">More Information</button></a>
-							<a href="#mailto:2010144@student.goddardusd.com"><button class="btn-car btn-ask">Ask For Availability</button></a>
+							<a href="2022 Mazda CX-30.html"><button class="btn-car btn-info">More Information</button></a>
+							<button class="btn-car btn-ask" onClick="openAvail('2022 Mazda CX-30', 'Check Availability')">Ask For Availability</button>
 						</div>
 					</div>
 				</div>
@@ -239,8 +269,8 @@
 						</table>
 						<div class="div-car-btn">
 							<a href="payment.html#m-price=41995"><p class="p-loan">Calculate Monthly Payment</p></a>
-							<a href="#"><button class="btn-car btn-info">More Information</button></a>
-							<a href="#mailto:2010144@student.goddardusd.com"><button class="btn-car btn-ask">Ask For Availability</button></a>
+							<a href="2020 Ford F-150 XL SuperCrew 4x4.html"><button class="btn-car btn-info">More Information</button></a>
+							<button class="btn-car btn-ask" onClick="openAvail('2020 Ford F-150 XL SuperCrew 4x4', 'Check Availability')">Ask For Availability</button>
 						</div>
 					</div>
 				</div>
@@ -271,8 +301,8 @@
 						</table>
 						<div class="div-car-btn">
 							<a href="payment.html#m-price=55491"><p class="p-loan">Calculate Monthly Payment</p></a>
-							<a href="#"><button class="btn-car btn-info">More Information</button></a>
-							<a href="#mailto:2010144@student.goddardusd.com"><button class="btn-car btn-ask">Ask For Availability</button></a>
+							<a href="2022 Chevrolet Silverado 1500 LTD LT High Country.html"><button class="btn-car btn-info">More Information</button></a>
+							<button class="btn-car btn-ask" onClick="openAvail('2022 Chevrolet Silverado 1500 LTD LT High Country', 'Check Availability')">Ask For Availability</button>
 						</div>
 					</div>
 				</div>
@@ -303,8 +333,8 @@
 						</table>
 						<div class="div-car-btn">
 							<a href="payment.html#m-price=93997"><p class="p-loan">Calculate Monthly Payment</p></a>
-							<a href="#"><button class="btn-car btn-info">More Information</button></a>
-							<a href="#mailto:2010144@student.goddardusd.com"><button class="btn-car btn-ask">Ask For Availability</button></a>
+							<a href="2021 Chevrolet Corvette 3LT.html"><button class="btn-car btn-info">More Information</button></a>
+							<button class="btn-car btn-ask" onClick="openAvail('2021 Chevrolet Corvette 3LT', 'Check Availability')">Ask For Availability</button>
 						</div>
 					</div>
 				</div>
@@ -368,7 +398,8 @@
 				</table>
 			</div>
 			<div class="column middle">
-				<a href="index.html"><img src="images/Webpage%20Files/Logo.png" alt="logo" class="logo-foot"></a>
+				<br>
+				<a href="index.html"><img src="images/Webpage%20Files/Logo_Transparent_4.png" alt="logo" class="logo-foot"></a>
 			</div>
 			<div class="column right">
 				<address>
@@ -390,6 +421,8 @@
 		</div>
 		<br>
 	</footer>
+	
     <script src="script.js" type="text/javascript"></script>
+	
 </body>
 <!-- InstanceEnd --></html>

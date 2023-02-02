@@ -6,6 +6,7 @@
 <meta name="description" content="Template page">
 <title>Template Page</title>
 <!-- InstanceEndEditable -->
+<link href="../images/Webpage%20Files/car%20Icon.png" rel="icon" type="image/x-icon">
 <link href="../sheets.css" rel="stylesheet" type="text/css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,13 +22,24 @@
 
 <body>
 	<nav class="accent" id="navreg">
-		<a href="../index.html"><img src="../images/Logo_Transparent.png" alt="Safe Park Motors Logo" class="logo-nav"></a><!-- InstanceBeginEditable name="EditRegion6" -->
+		<a href="../index.html"><img src="../images/Webpage%20Files/Logo_Transparent_4.png" alt="Safe Park Motors Logo" class="logo-nav"></a><!-- InstanceBeginEditable name="EditRegion6" -->
         <ul class="nav-list">
-        	<a href="../index.html"><li class="active">Home</li></a>
+        	<a href="../index.html"><li>Home</li></a>
 			<a href="../inventory.html"><li>Inventory</li></a>
 			<a href="../sell.html"><li>Trade In</li></a>
 			<a href="../about.html"><li>About Us</li></a>
         </ul>
+	</nav>
+	<nav class="accent" id="navsm">
+		<img src="#" alt="#" onClick="openList()" id="navsm-img">
+		<div id="div-navsm-list" class="accent">
+			<ul class="navsm-list">
+        		<a href="../index.html"><li>Home</li></a>
+				<a href="../inventory.html"><li>Inventory</li></a>
+				<a href="../sell.html"><li>Trade In</li></a>
+				<a href="../about.html"><li>About Us</li></a>
+       		</ul>
+		</div>
         <!-- InstanceEndEditable --></nav>
 	<!-- InstanceBeginEditable name="EditRegion3" -->
 	<br>
@@ -42,8 +54,9 @@
 		</div>
     </div>
 	
-	<div id="div-black">
-		<div class="div-gallery">
+	<div id="div-galleryholder">
+		<div id="div-black" onClick="closeImages()"></div>
+		<div id="div-gallery">
 		<div class="arrow" id="left-arrow">&lt;</div>
 		<div class="arrow" id="right-arrow">&gt;</div>
 		<div class="back" onClick="closeImages()">X</div>
@@ -99,7 +112,7 @@
 			<button class="btn-carinfo">Check Availability</button>
 			<button class="btn-carinfo">Payment Calculator</button>
 			<button class="btn-carinfo">Schedule Drive</button>
-			<address>
+			<address class="address-carpage">
 				Safe Park Motors
 				<br>
 				1234 N. 8th St
@@ -170,7 +183,8 @@
 				</table>
 			</div>
 			<div class="column middle">
-				<a href="../index.html"><img src="../images/Webpage%20Files/Logo.png" alt="logo" class="logo-foot"></a>
+				<br>
+				<a href="../index.html"><img src="../images/Webpage%20Files/Logo_Transparent_4.png" alt="logo" class="logo-foot"></a>
 			</div>
 			<div class="column right">
 				<address>
@@ -192,6 +206,8 @@
 		</div>
 		<br>
 	</footer>
+	
     <script src="../script.js" type="text/javascript"></script>
+	
 </body>
 <!-- InstanceEnd --></html>

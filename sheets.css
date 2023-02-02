@@ -8,6 +8,10 @@ body {
 	margin: 0px;
 }
 
+.stopscrolling {
+	overflow: hidden;
+}
+
 /*!color*/
 .accent {
 	background-color: #3E8989;
@@ -16,11 +20,12 @@ body {
 /*nav------------------------------------------------------------------------------------------*/
 
 #navreg {
-	
+	font-size: 17px;
 }
 
 #navsm {
-	
+	font-size: 17px;
+	text-align: left;
 }
 
 /*!color*/
@@ -32,8 +37,31 @@ nav {
 	width: 100%;
 	position: fixed;
 	display: inline-block;
-	z-index: 100;
-	font-size: 17px;
+	z-index: 5;
+}
+
+#div-navsm-list {
+	height: 100vh;
+	width: 100vw;
+	display: none;
+	transition: margin-left 1s;
+}
+
+#navsm-img {
+	content: url("images/Webpage Files/lines.png");
+	background-size: cover;
+	max-height: 50%;
+	max-width: 50%;
+	vertical-align: middle;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.navsm-list li {
+	margin-bottom: 0px;
+	list-style: none;
+	margin-left: -40px;
+	padding-left: 40px;
 }
 
 ul {
@@ -49,7 +77,7 @@ ul.nav-list a li {
 
 /*!color*/
 ul.nav-list a li:hover, .active {
-	background-color: teal;
+	background-color: #007777;
 }
 
 /*!color*/
@@ -64,6 +92,7 @@ a {
 	padding-left: 40px;
 }
 
+/*small screen*/
 @media (max-width:800px){
 	#navreg {
 		display: none;
@@ -71,6 +100,184 @@ a {
 	
 	#navsm {
 		display: block;
+	}
+	
+	.middle > a {
+		display: none;
+	}
+	
+	.left, .right {
+		width: 40% !important;
+	}
+	
+	button {
+		font-size: 1em !important;
+		margin-left: 10px !important;
+		margin-right: 10px !important;
+		width: 30% !important;
+	}
+	
+	.submit {
+		width: 50% !important;
+	}
+	
+	.submitplus {
+		width: 80% !important;
+	}
+	
+	.search-list > a {
+		display: block;
+		margin-bottom: 12px;
+	}
+	
+	#div-image4 {
+		background-position: 50% 0 !important;
+	}
+	
+	.row {
+		display: block !important;
+		width: 70vw;
+		margin-bottom: 0 !important;
+	}
+	
+	.staffitem {
+		width: 100% !important;
+		margin-bottom: 50px;
+	}
+	
+	.staffimg {
+		width: 50% !important;
+	}
+	
+	#div-carlist {
+		width: 90vw !important;
+	}
+	
+	.div-car-img {
+		display: none !important;
+	}
+	
+	.div-car-info {
+		width: 90% !important;
+		text-align: center;
+	}
+	
+	.btn-car {
+		font-size: .75em !important;
+	}
+	
+	.div-filter {
+		display: none;
+		width: 100vw !important;
+		height: calc(100vh - 140px);
+		margin-left: -5% !important;
+		position: fixed;
+		overflow-y: scroll;
+		box-shadow: -100px 0 goldenrod;
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, goldenrod 5%);
+	}
+	
+	.div-openfilter {
+		width: 30%;
+		float: left;
+	}
+	
+	#open-filter {
+		color: black;
+		background-color: goldenrod;
+		padding: 5px 15px;
+		border-radius: 5px;
+		cursor: pointer;
+		user-select: none;
+	}
+	
+	#clear-filter {
+		display: none;
+	}
+	
+	.seemore {
+		font-size: 1.8em !important;
+		margin-right: 5px !important;
+	}
+	
+	.div-table {
+		display: inline-block !important;
+	}
+	
+	.tbl-carinfo {
+		width: 100% !important;
+		display: inline;
+		float: left;
+	}
+	
+	.tbl-carinfo tr {
+	}
+	
+	.aside-carinfo {
+		position: relative;
+		left: 5px;
+		margin-top: -35px;
+	}
+	
+	.btn-carinfo {
+		width: 100% !important;
+		font-size: .8em !important;
+	}
+	
+	.address-carpage {
+		color: rgb(200,200,200);
+	}
+}
+
+@media (max-width:535px) {
+	.tbl-description {
+		display: none;
+	}
+	
+	.div-car-btn {
+		width: 100% !important;
+	}
+}
+
+@media (max-width:467px) {
+	.aside-carinfo {
+		position: relative;
+		right: 5px;
+		margin-top: -150px;
+	}
+}
+
+
+
+@media (min-width:801px) and (max-width:1020px){
+	.btn-ask {
+		display: none;
+	}
+	
+	.btn-car {
+		width: 50% !important;
+		font-size: .7em;
+		overflow-wrap: break-word;
+		height: 50% !important;
+	}
+	
+	.div-car-btn {
+		width: 40% !important;
+	}
+}
+
+/*big screen*/
+@media (min-width:801px){
+	#navreg {
+		display: block;
+	}
+	
+	#navsm {
+		display: none;
+	}
+	
+	.div-openfilter {
+		display: none;
 	}
 }
 
@@ -420,6 +627,10 @@ h3 {
 	float: left;
 }
 
+.tbl-description tr td:first-child {
+	text-align: left;
+}
+
 .tbl-description tr td:nth-child(2) {
 	text-align: right;
 }
@@ -533,7 +744,7 @@ aside > details:not(:last-child) {
 .row {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 100px;
+	margin-bottom: 30px;
 }
 
 #div-stafflist {
@@ -544,7 +755,7 @@ aside > details:not(:last-child) {
 
 .staffimg {
     height: 100%;
-	width: 30%;
+	width: 40%;
 }
 
 .staffimg img {
@@ -611,6 +822,54 @@ aside > details:not(:last-child) {
 	cursor: pointer;
 }
 
+.cx30-m {
+	background-image: url("images/Webpage Files/CX30 Front.jpg") !important;
+}
+
+.cx30-s {
+	background-image: url("images/Webpage Files/CX30 Side.jpg") !important;
+}
+
+.cx30-r {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/Webpage Files/CX30 Back.jpg") !important;
+}
+
+.f150-m {
+	background-image: url("images/Webpage Files/F150 Front.jpg") !important;
+}
+
+.f150-s {
+	background-image: url("images/Webpage Files/F150 Side.jpg") !important;
+}
+
+.f150-r {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/Webpage Files/F150 Back.jpg") !important;
+}
+
+.silv-m {
+	background-image: url("images/Webpage Files/Silverado Front.jpg") !important;
+}
+
+.silv-s {
+	background-image: url("images/Webpage Files/Silverado Side.jpg") !important;
+}
+
+.silv-r {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/Webpage Files/Silverado Back.jpg") !important;
+}
+
+.crv-m {
+	background-image: url("images/Webpage Files/Corvette Front.jpg") !important;
+}
+
+.crv-s {
+	background-image: url("images/Webpage Files/Corvette Side.jpg") !important;
+}
+
+.crv-r {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/Webpage Files/Corvette Back.jpg") !important;
+}
+
 .seemore {
 	text-align: right;
 	font-size: 3em;
@@ -635,7 +894,32 @@ aside > details:not(:last-child) {
 	height: 80px;
 }
 
-#div-black {
+.center {
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+.inv {
+	color: rgba(0,0,0,0)
+}
+
+#lblemail {
+	margin-top: 20%;
+}
+
+#div-avform {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 30;
+	margin-left: auto;
+	margin-right: auto;
+	aspect-ratio: 3/2;
+	width: 40%;
+}
+
+#div-galleryholder, #div-available {
 	display: none;
 	position: fixed;
 	left: 50%;
@@ -643,8 +927,14 @@ aside > details:not(:last-child) {
 	transform: translate(-50%, -50%);
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,.9);
 	z-index: 20;
+}
+
+#div-black, #div-dark {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.9);
 }
 
 #div-gallery {
@@ -672,6 +962,7 @@ aside > details:not(:last-child) {
 	justify-content: center;
 	cursor: pointer;
 	user-select: none;
+	z-index: 25;
 }
 
 #left-arrow {
@@ -727,7 +1018,7 @@ aside > details:not(:last-child) {
 }
 
 .aside-carinfo {
-	width: 20%;
+	width: 25%;
 	display: inline-block;
 	margin-right: 15px;
 	float: right;
@@ -797,6 +1088,10 @@ td {
 h4 {
 	font-size: 1.25em;
 	margin-top: 5px;
+}
+
+address > p {
+	overflow-wrap: break-word;
 }
 
 .logo-foot {
