@@ -1,0 +1,217 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/ht.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="about us page">
+<title>Safe Park Motors | About Us</title>
+<!-- InstanceEndEditable -->
+<link href="images/Webpage%20Files/car%20icon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="sheets.css" rel="stylesheet" type="text/css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Signika+Negative&family=Sofia+Sans:wght@300&display=swap" rel="stylesheet">
+
+<!-- InstanceParam name="doctitle" type="boolean" value="true" -->
+<!-- InstanceParam name="head image" type="boolean" value="true" -->
+<!-- InstanceParam name="paragraph" type="boolean" value="true" -->
+<!-- InstanceParam name="form" type="boolean" value="true" -->
+<!-- InstanceParam name="nav" type="boolean" value="true" -->
+</head>
+
+<body>
+	<nav class="accent" id="navreg">
+		<a href="index.html"><img src="images/Webpage%20Files/Logo_Transparent_4.png" alt="Safe Park Motors Logo" class="logo-nav"></a><!-- InstanceBeginEditable name="EditRegion6" -->
+        <ul class="nav-list">
+        	<a href="index.html"><li>Home</li></a>
+			<a href="inventory.html"><li>Inventory</li></a>
+			<a href="sell.html"><li>Trade In</li></a>
+			<a href="about.html"><li class="active">About Us</li></a>
+        </ul>
+	</nav>
+	<nav class="accent" id="navsm">
+		<img src="#" alt="#" onClick="openList()" id="navsm-img">
+		<div id="div-navsm-list" class="accent">
+			<ul class="navsm-list">
+        		<a href="../index.html"><li class="active">Home</li></a>
+				<a href="../inventory.html"><li>Inventory</li></a>
+				<a href="../sell.html"><li>Trade In</li></a>
+				<a href="../about.html"><li>About Us</li></a>
+       		</ul>
+		</div>
+        <!-- InstanceEndEditable --></nav>
+	<!-- InstanceBeginEditable name="EditRegion3" -->
+    <br>
+	<div id="div-image3">
+	  <br>
+	  <br>
+      <h2>About Us</h2>
+    </div>
+    <!-- InstanceEndEditable -->
+	<!-- InstanceBeginEditable name="EditRegion4" -->
+    <div id="div-p">
+      <h1>Who Are We?</h1>
+      <h5>&emsp;Our Mission</h5>
+	  <p>It's simple moments like dropping off the kids at soccer practice to road trips with your best friends that make cars integral to our world. With the necessity for cars growing over time, Safe Park Motors strives to connect with our community by offering them the best deals we can. In every department, our staff ensures that you and your car stay perfectly in sync. We're there with you every step of the way from the first turn of the car key to the last tire change.</p>
+	  <br>
+	  <h5>&emsp;Our Start</h5>
+	  <p>We got our start in Goddard, Kansas just between 199th and 151st when two people decided that the area needed a better way to shop for cars. Throughout the years, we've dedicated ourselves to fostering our community through accesible and comprehensive service. Today, we serve the greater Wichita area in all their automotive needs.</p>
+    </div>
+    <!-- InstanceEndEditable -->
+	<!-- InstanceBeginEditable name="EditRegion5" -->
+	<hr>
+	
+	<div id="div-stafflist">
+		<h1>Our Staff</h1>
+		<div class="row">
+			<div class="staffitem halfplus">
+				<div class="staffimg halfplus">
+					<img src="images/Webpage Files/Hunter Houser.jpg" alt="Hunter Houser, head of sales">
+				</div>
+				<div class="staffinfo halfplus">
+					<h4 class="staffp">Hunter Houser</h4>
+					<p class="staffp">Head of Sales</p>
+					<p class="staffp">hhouser@spm.com</p>
+					<p class="staffp">316-555-9941</p>
+				</div>
+			</div>
+			<div class="staffitem halfplus">
+				<div class="staffimg halfplus">
+					<img src="images/Webpage Files/Rachel Debes.jpg" alt="Rachel Debes, head of finance">
+				</div>
+				<div class="staffinfo halfplus">
+					<h4 class="staffp">Rachel Debes</h4>
+					<p class="staffp">Head of Finance</p>
+					<p class="staffp">rdebes@spm.com</p>
+					<p class="staffp">316-555-8462</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="staffitem halfplus">
+				<div class="staffimg halfplus">
+					<img src="images/Webpage Files/Tyner Horn.jpg" alt="Tyner Horn, head of repairs">
+				</div>
+				<div class="staffinfo halfplus">
+					<h4 class="staffp">Tyner Horn</h4>
+					<p class="staffp">Head of Repairs</p>
+					<p class="staffp">thorn@spm.com</p>
+					<p class="staffp">316-555-0735</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<hr>
+	
+    <div id="div-form">
+      <form id="form-contact" onSubmit="sendEmail()" autocomplete="off">
+        <h1>Contact Us</h1>
+        <div>
+          <label for="first" class="half">First Name: </label>
+          <label for="last" class="half">Last Name: </label>
+          <br>
+          <input type="text" name="name" id="first" class="half" required>
+          <input type="text" name="name" id="last" class="half" required>
+        </div>
+        <br>
+        <br>
+        <div>
+          <label for="phone" class="half">Phone Number: </label>
+          <label for="email" class="half">Email: </label>
+          <br>
+          <input type="text" name="phone" id="phone" class="half" required>
+          <input type="text" name="email" id="email" class="half" required>
+        </div>
+        <br>
+        <br>
+        <div>
+          <label for="comments">Comments: </label>
+          <br>
+		  <textarea id="comments" name="comments" required></textarea>
+        </div>
+        <br>
+        <br>
+		<div class="div-consent">
+		  <input type="checkbox" name="consent" id="consent" required>
+		  <label for="consent">By submitting this form, I consent to receive text messages, phone calls, or emails from the dealer and its staff using the information I have provided. By opting into this service, I understand that phone calls may be recorded for quality assurance purposes. <i>Standard data rates may apply.</i></label>
+		  <br>
+		  <br>
+		</div>
+		<br>
+		<br>
+        <input type="submit" name="submit" class="submit">
+      </form>
+    </div>
+	
+	
+    <!-- InstanceEndEditable --><br>
+	<br>
+	<footer class="accent">
+			<br>
+		<div id="footer">
+			<div class="column left">
+				<table id="tbl-hours">
+					<tr>
+						<td colspan="2" class="tbl-head">Hours of Operation</td>
+					</tr>
+					<tr>
+						<td class="day">Monday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Tuesday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Wednesday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Thursday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Friday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Saturday</td>
+						<td class="time">9:00 AM - 7:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Sunday</td>
+						<td class="time">CLOSED</td>
+					</tr>
+				</table>
+			</div>
+			<div class="column middle">
+				<br>
+				<a href="index.html"><img src="images/Webpage%20Files/Logo_Transparent_4.png" alt="logo" class="logo-foot"></a>
+			</div>
+			<div class="column right">
+				<address>
+					<h4>Address</h4>
+					<p>1234 N. 8th St</p>
+					<p>Goddard, KS 67235</p>
+					<p><a href="tel:+13165551234">(316)-555-1234</a></p>
+					<p><a href="mailto:2010144@student.goddardusd.com">2010144@student.goddardusd.com</a></p>
+				</address>
+			</div>
+		</div>
+			<br>
+			<hr>
+		<div class="foot-links">
+			<a href="index.html" class="btm-link">Home</a>
+			<a href="inventory.html" class="btm-link">Inventory</a>
+			<a href="sell.html" class="btm-link">Trade In</a>
+			<a href="about.html" class="btm-link-end">About Us</a>
+		</div>
+		<br>
+		<p class="p-trm">created by Grace Kallman (00074297) and Allison Banks (00047363)</p>
+	</footer>
+    <script src="script.js" type="text/javascript"></script>
+	
+</body>
+<!-- InstanceEnd --></html>

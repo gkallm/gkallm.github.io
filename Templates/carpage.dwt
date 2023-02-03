@@ -1,0 +1,213 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/ht.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="Template page">
+<title>Template Page</title>
+<!-- InstanceEndEditable -->
+<link href="../images/Webpage%20Files/car%20icon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="../sheets.css" rel="stylesheet" type="text/css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Signika+Negative&family=Sofia+Sans:wght@300&display=swap" rel="stylesheet">
+
+<!-- InstanceParam name="doctitle" type="boolean" value="true" -->
+<!-- InstanceParam name="head image" type="boolean" value="true" -->
+<!-- InstanceParam name="paragraph" type="boolean" value="true" -->
+<!-- InstanceParam name="form" type="boolean" value="true" -->
+<!-- InstanceParam name="nav" type="boolean" value="true" -->
+</head>
+
+<body>
+	<nav class="accent" id="navreg">
+		<a href="../index.html"><img src="../images/Webpage%20Files/Logo_Transparent_4.png" alt="Safe Park Motors Logo" class="logo-nav"></a><!-- InstanceBeginEditable name="EditRegion6" -->
+        <ul class="nav-list">
+        	<a href="../index.html"><li>Home</li></a>
+			<a href="../inventory.html"><li>Inventory</li></a>
+			<a href="../sell.html"><li>Trade In</li></a>
+			<a href="../about.html"><li>About Us</li></a>
+        </ul>
+	</nav>
+	<nav class="accent" id="navsm">
+		<img src="#" alt="#" onClick="openList()" id="navsm-img">
+		<div id="div-navsm-list" class="accent">
+			<ul class="navsm-list">
+        		<a href="../index.html"><li>Home</li></a>
+				<a href="../inventory.html"><li>Inventory</li></a>
+				<a href="../sell.html"><li>Trade In</li></a>
+				<a href="../about.html"><li>About Us</li></a>
+       		</ul>
+		</div>
+        <!-- InstanceEndEditable --></nav>
+	<!-- InstanceBeginEditable name="EditRegion3" -->
+	<br>
+	<br>
+    <div id="div-carimgs">
+		<div id="div-carimg-main">
+		</div>
+		<div id="div-carimg-side">
+		</div>
+		<div id="div-carimg-rest" onClick="showImages('300 Limited')">
+			<h2 class="seemore">See More</h2>
+		</div>
+    </div>
+	
+	<div id="div-galleryholder">
+		<div id="div-black" onClick="closeImages()"></div>
+		<div id="div-gallery">
+		<div class="arrow" id="left-arrow">&lt;</div>
+		<div class="arrow" id="right-arrow">&gt;</div>
+		<div class="back" onClick="closeImages()">X</div>
+	</div>
+	</div>
+    <!-- InstanceEndEditable -->
+	<!-- InstanceBeginEditable name="EditRegion4" -->
+    <div id="div-carinfo">
+		<div class="div-header">
+    		<h1 class="hleft">Year Make Model</h1>
+			<h1 class="hright">$26,988</h1>
+		</div>
+		<br>
+		<div class="div-table">
+			<table class="tbl-carinfo">
+			<tr>
+				<td>MPG City/Hwy:</td>
+				<td>18/27</td>
+			</tr>
+			<tr>
+				<td>Mileage:</td>
+				<td>49,845</td>
+			</tr>
+			<tr>
+				<td>Body Style:</td>
+				<td>Sedan</td>
+			</tr>
+			<tr>
+				<td>Engine:</td>
+				<td>6 Cyl - 3.6 L</td>
+			</tr>
+		</table>
+			<table class="tbl-carinfo">
+			<tr>
+				<td>Drive Type:</td>
+				<td>AWD/4WD</td>
+			</tr>
+			<tr>
+				<td>Color:</td>
+				<td>Black</td>
+			</tr>
+			<tr>
+				<td>Vin #:</td>
+				<td>2C3CCAKG4LH131697</td>
+			</tr>
+			<tr>
+				<td>Stock #:</td>
+				<td>M92038</td>
+			</tr>
+		</table>
+		</div>
+		<aside class="aside-carinfo">
+			<button class="btn-carinfo">Check Availability</button>
+			<button class="btn-carinfo">Payment Calculator</button>
+			<button class="btn-carinfo">Schedule Drive</button>
+			<address class="address-carpage">
+				Safe Park Motors
+				<br>
+				1234 N. 8th St
+				<br>
+				Goddard, KS 67235
+				<br>
+				United States of America
+			</address>
+		</aside>
+		<div class="div-features">
+			<h3>Features</h3>
+			<br>
+			<br>
+			<br>
+			<details>
+				<summary>category 1</summary>
+				<p>thing 1</p>
+				<p>thing 2</p>
+				<ul>
+					<li>thing 3</li>
+					<li>thing 4</li>
+				</ul>
+			</details>
+		</div>
+    </div>
+	<hr id="hide">
+    <!-- InstanceEndEditable -->
+	<!-- InstanceBeginEditable name="EditRegion5" -->
+	
+    <!-- InstanceEndEditable --><br>
+	<br>
+	<footer class="accent">
+			<br>
+		<div id="footer">
+			<div class="column left">
+				<table id="tbl-hours">
+					<tr>
+						<td colspan="2" class="tbl-head">Hours of Operation</td>
+					</tr>
+					<tr>
+						<td class="day">Monday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Tuesday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Wednesday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Thursday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Friday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Saturday</td>
+						<td class="time">9:00 AM - 7:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Sunday</td>
+						<td class="time">CLOSED</td>
+					</tr>
+				</table>
+			</div>
+			<div class="column middle">
+				<br>
+				<a href="../index.html"><img src="../images/Webpage%20Files/Logo_Transparent_4.png" alt="logo" class="logo-foot"></a>
+			</div>
+			<div class="column right">
+				<address>
+					<h4>Address</h4>
+					<p>1234 N. 8th St</p>
+					<p>Goddard, KS 67235</p>
+					<p><a href="tel:+13165551234">(316)-555-1234</a></p>
+					<p><a href="mailto:2010144@student.goddardusd.com">2010144@student.goddardusd.com</a></p>
+				</address>
+			</div>
+		</div>
+			<br>
+			<hr>
+		<div class="foot-links">
+			<a href="../index.html" class="btm-link">Home</a>
+			<a href="../inventory.html" class="btm-link">Inventory</a>
+			<a href="../sell.html" class="btm-link">Trade In</a>
+			<a href="../about.html" class="btm-link-end">About Us</a>
+		</div>
+		<br>
+		<p class="p-trm">created by Grace Kallman (00074297) and Allison Banks (00047363)</p>
+	</footer>
+    <script src="../script.js" type="text/javascript"></script>
+	
+</body>
+<!-- InstanceEnd --></html>

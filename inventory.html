@@ -1,0 +1,428 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/ht.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="inventory page">
+<title>Safe Park Motors | Inventory</title>
+<!-- InstanceEndEditable -->
+<link href="images/Webpage%20Files/car%20icon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="sheets.css" rel="stylesheet" type="text/css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Signika+Negative&family=Sofia+Sans:wght@300&display=swap" rel="stylesheet">
+
+<!-- InstanceParam name="doctitle" type="boolean" value="true" -->
+<!-- InstanceParam name="head image" type="boolean" value="true" -->
+<!-- InstanceParam name="paragraph" type="boolean" value="true" -->
+<!-- InstanceParam name="form" type="boolean" value="true" -->
+<!-- InstanceParam name="nav" type="boolean" value="true" -->
+</head>
+
+<body>
+	<nav class="accent" id="navreg">
+		<a href="index.html"><img src="images/Webpage%20Files/Logo_Transparent_4.png" alt="Safe Park Motors Logo" class="logo-nav"></a><!-- InstanceBeginEditable name="EditRegion6" -->
+        <ul class="nav-list">
+        	<a href="index.html"><li>Home</li></a>
+			<a href="inventory.html"><li class="active">Inventory</li></a>
+			<a href="sell.html"><li>Trade In</li></a>
+			<a href="about.html"><li>About Us</li></a>
+        </ul>
+	</nav>
+	<nav class="accent" id="navsm">
+		<img src="#" alt="#" onClick="openList()" id="navsm-img">
+		<div id="div-navsm-list" class="accent">
+			<ul class="navsm-list">
+        		<a href="../index.html"><li class="active">Home</li></a>
+				<a href="../inventory.html"><li>Inventory</li></a>
+				<a href="../sell.html"><li>Trade In</li></a>
+				<a href="../about.html"><li>About Us</li></a>
+       		</ul>
+		</div>
+        <!-- InstanceEndEditable --></nav>
+	<!-- InstanceBeginEditable name="EditRegion3" -->
+    <div id="div-available">
+		<div id="div-dark" onClick="closeAvail()"></div>
+		<div id="div-avform">
+			<label for="text" class="center" id="lblemail">Email:</label>
+			<br>
+			<input type="text" class="center" id="inemail">
+			<br>
+			<br>
+			<br>
+			<input type="submit" class="submit submitplus center" onClick="sendAvail('2020 Chrysler 300 Limited')">
+			<p id="p-avail-to" class="inv">to: </p>
+			<p id="p-avail-for" class="inv">for: </p>
+		</div>
+	</div>
+	
+	
+	<br>
+	<div id="div-aboveInv">
+		<div class="div-filter" id="div-clear">	
+			<a onClick="clearFilter()" id="clear-filter">Clear filter</a>
+		</div>
+		<div class="div-openfilter">
+			<a onClick="openFilter()" id="open-filter">Filter</a>
+		</div>
+			<div id="div-sort">
+				<select id="sortby" onChange="sortBy()">
+					<option value="priceLow">Price - Lowest</option>
+					<option value="priceHigh">Price - Highest</option>
+					<option value="mileageLow">Mileage - Lowest</option>
+					<option value="mileageHigh">Mileage - Highest</option>
+					<option value="yearLow">Year - Oldest</option>
+					<option value="yearHigh">Year - Newest</option>
+				</select>
+			</div>
+		</div>
+	<div id="div-inventory">
+		<aside class="div-filter" id="filterid">
+				<details id="det-make">
+					<summary>Make</summary>
+					<div class="div-checkboxes"> <!--alphabetize later -->
+						<input type="checkbox" name="makeHonda" id="makeHonda" onChange="updateList()">
+						<label for="makeHonda" class="lbl-checkbox">Honda</label>
+						<br>
+						<input type="checkbox" name="makeToyota" id="makeToyota" onChange="updateList()">
+						<label for="makeToyota" class="lbl-checkbox">Toyota</label>
+						<br>
+						<input type="checkbox" name="makeFord" id="makeFord" onChange="updateList()">
+						<label for="makeFord" class="lbl-checkbox">Ford</label>
+						<br>
+						<input type="checkbox" name="makeChevrolet" id="makeChevrolet" onChange="updateList()">
+						<label for="makeChevrolet" class="lbl-checkbox">Chevrolet</label>
+						<br>
+						<input type="checkbox" name="makeChrysler" id="makeChrysler" onChange="updateList()">
+						<label for="makeChrysler" class="lbl-checkbox">Chrysler</label>
+						<br>
+						<input type="checkbox" name="makeOther" id="makeOther" onChange="updateList()">
+						<label for="makeOther" class="lbl-checkbox">Other</label>
+					</div>
+				</details>
+
+				<details id="det-year">
+					<summary>Year</summary>
+					<div class="div-checkboxes"> <!--not checkboxes but i wont fix it-->
+						<br>
+						<label for="minYear" class="lbl-range">Minimum Year:</label>
+						<input type="number" name="minYear" id="minYear" onChange="updateList()" class="min">
+						<br>
+						<br>
+						<label for="maxYear" class="lbl-range">Maximum Year:</label>
+						<input type="number" name="maxYear" id="maxYear" onChange="updateList()" class="max">
+					</div>
+				</details>
+
+				<details id="det-price">
+					<summary>Price</summary>
+					<div class="div-checkboxes"> <!--not checkboxes but i wont fix it-->
+						<br>
+						<label for="minPrice" class="lbl-range">Minimum Price:</label>
+						<input type="number" name="minPrice" id="minPrice" onChange="updateList()" class="min">
+						<br>
+						<br>
+						<label for="maxPrice" class="lbl-range">Maximum Price:</label>
+						<input type="number" name="maxPrice" id="maxPrice" onChange="updateList()" class="max">
+					</div>
+				</details>
+
+				<details id="det-mileage">
+					<summary>Mileage</summary>
+					<div class="div-checkboxes"> <!--not checkboxes but i wont fix it-->
+						<br>
+						<label for="minMileage" class="lbl-range">Minimum Mileage:</label>
+						<input type="number" name="minMileage" id="minMileage" onChange="updateList()" class="min">
+						<br>
+						<br>
+						<label for="maxMileage" class="lbl-range">Maximum Mileage:</label>
+						<input type="number" name="maxMileage" id="maxMileage" onChange="updateList()" class="max">
+					</div>
+				</details>
+
+				<details id="det-mpg">
+					<summary>MPG (highway)</summary>
+					<div class="div-checkboxes"> <!--not checkboxes but i wont fix it-->
+						<br>
+						<label for="minMPG" class="lbl-range">Minimum MPG:</label>
+						<input type="number" name="minMPG" id="minMPG" onChange="updateList()" class="min">
+						<br>
+						<br>
+						<label for="maxMPG" class="lbl-range">Maximum MPG:</label>
+						<input type="number" name="maxMPG" id="maxMPG" onChange="updateList()" class="max">
+					</div>
+				</details>
+
+				<details id="det-color">
+					<summary>Color</summary>
+					<div class="div-checkboxes">
+						<input type="checkbox" name="colorBlack" id="colorBlack" onChange="updateList()">
+						<label for="colorBlack" class="lbl-checkbox">Black</label>
+						<br>
+						<input type="checkbox" name="colorWhite" id="colorWhite" onChange="updateList()">
+						<label for="colorWhite" class="lbl-checkbox">White</label>
+						<br>
+						<input type="checkbox" name="colorGray" id="colorGray" onChange="updateList()">
+						<label for="colorGray" class="lbl-checkbox">Gray/Silver</label>
+						<br>
+						<input type="checkbox" name="colorBlue" id="colorBlue" onChange="updateList()">
+						<label for="colorBlue" class="lbl-checkbox">Blue</label>
+						<br>
+						<input type="checkbox" name="colorRed" id="colorRed" onChange="updateList()">
+						<label for="colorRed" class="lbl-checkbox">Red</label>
+						<br>
+						<input type="checkbox" name="colorOther" id="colorOther" onChange="updateList()">
+					<label for="colorOther" class="lbl-checkbox">Other</label>
+				</div>
+			</details>
+		</aside>
+		<div id="div-carlist">
+			<div class="caritem makeChrysler year2020 price26988 mileage49845 mpg27 colorBlack" id="2020-Chrysler-300-Limited">
+					<div class="div-car-img"><img src="images/Webpage Files/300 Limited Front.jpg" alt=" " class="car-img"></div>
+					<div class="div-car-info">
+						<div class="div-car-head">
+							<h3>2020 Chrysler 300 Limited</h3>
+							<p class="price">$26,988</p>
+						</div>
+						<table class="tbl-description">
+							<tr>
+								<td>Color:</td>
+								<td>Black</td>
+							</tr>
+							<tr>
+								<td>Drive:</td>
+								<td>AWD/4WD</td>
+							</tr>
+							<tr>
+								<td>Transmission:</td>
+								<td>Automatic</td>
+							</tr>
+							<tr>
+								<td>Mileage:</td>
+								<td>49,845</td>
+							</tr>
+						</table>
+						<div class="div-car-btn">
+							<a href="payment.html#m-price=29375"><p class="p-loan">Calculate Monthly Payment</p></a>
+							<a href="2020 Chrysler 300 Limited.html"><button class="btn-car btn-info">More Information</button></a>
+							<button class="btn-car btn-ask" onClick="openAvail('2020 Chrysler 300 Limited', 'Check Availability')">Ask For Availability</button>
+						</div>
+					</div>
+				</div>
+			<div class="caritem makeOther year2022 price29375 mileage3376 mpg31 colorGray" id="2022-Mazda-CX-30">
+					<div class="div-car-img"><img src="images/Webpage Files/CX30 Front.jpg" alt=" " class="car-img"></div>
+					<div class="div-car-info">
+						<div class="div-car-head">
+							<h3>2022 Mazda CX-30</h3>
+							<p class="price">$29,375</p>
+						</div>
+						<table class="tbl-description">
+							<tr>
+								<td>Color:</td>
+								<td>Gray/Silver</td>
+							</tr>
+							<tr>
+								<td>Drive:</td>
+								<td>AWD</td>
+							</tr>
+							<tr>
+								<td>Transmission:</td>
+								<td>Automatic</td>
+							</tr>
+							<tr>
+								<td>Mileage:</td>
+								<td>3,376</td>
+							</tr>
+						</table>
+						<div class="div-car-btn">
+							<a href="payment.html#m-price=29375"><p class="p-loan">Calculate Monthly Payment</p></a>
+							<a href="2022 Mazda CX-30.html"><button class="btn-car btn-info">More Information</button></a>
+							<button class="btn-car btn-ask" onClick="openAvail('2022 Mazda CX-30', 'Check Availability')">Ask For Availability</button>
+						</div>
+					</div>
+				</div>
+			<div class="caritem makeFord year2020 price41995 mileage35910 mpg22 colorBlack" id="2020-Ford-F-150-XL-Super-Crew">
+					<div class="div-car-img"><img src="images/Webpage Files/F150 Front.jpg" alt=" " class="car-img"></div>
+					<div class="div-car-info">
+						<div class="div-car-head">
+							<h3>2020 Ford F-150 XL SuperCrew</h3>
+							<p class="price">$41,995</p>
+						</div>
+						<table class="tbl-description">
+							<tr>
+								<td>Color:</td>
+								<td>Black</td>
+							</tr>
+							<tr>
+								<td>Drive:</td>
+								<td>AWD/4WD</td>
+							</tr>
+							<tr>
+								<td>Transmission:</td>
+								<td>Automatic</td>
+							</tr>
+							<tr>
+								<td>Mileage:</td>
+								<td>35,910</td>
+							</tr>
+						</table>
+						<div class="div-car-btn">
+							<a href="payment.html#m-price=41995"><p class="p-loan">Calculate Monthly Payment</p></a>
+							<a href="2020 Ford F-150 XL SuperCrew 4x4.html"><button class="btn-car btn-info">More Information</button></a>
+							<button class="btn-car btn-ask" onClick="openAvail('2020 Ford F-150 XL SuperCrew 4x4', 'Check Availability')">Ask For Availability</button>
+						</div>
+					</div>
+				</div>
+			<div class="caritem makeChevrolet year2022 price55491 mileage11328 mpg21 colorBlack" id="2022-Chevrolet Silverado-1500">
+					<div class="div-car-img"><img src="images/Webpage Files/Silverado Front.jpg" alt=" " class="car-img"></div>
+					<div class="div-car-info">
+						<div class="div-car-head">
+							<h3>2022 Chevrolet Silverado 1500</h3>
+							<p class="price">$55,491</p>
+						</div>
+						<table class="tbl-description">
+							<tr>
+								<td>Color:</td>
+								<td>Black</td>
+							</tr>
+							<tr>
+								<td>Drive:</td>
+								<td>4WD</td>
+							</tr>
+							<tr>
+								<td>Transmission:</td>
+								<td>Automatic</td>
+							</tr>
+							<tr>
+								<td>Mileage:</td>
+								<td>11,328</td>
+							</tr>
+						</table>
+						<div class="div-car-btn">
+							<a href="payment.html#m-price=55491"><p class="p-loan">Calculate Monthly Payment</p></a>
+							<a href="2022 Chevrolet Silverado 1500 LTD LT High Country.html"><button class="btn-car btn-info">More Information</button></a>
+							<button class="btn-car btn-ask" onClick="openAvail('2022 Chevrolet Silverado 1500 LTD LT High Country', 'Check Availability')">Ask For Availability</button>
+						</div>
+					</div>
+				</div>
+			<div class="caritem makeChevrolet year2021 price93997 mileage2063 mpg27 colorBlue" id="2021-Chevrolet-Corvette-3LT">
+					<div class="div-car-img"><img src="images/Webpage Files/Corvette Front.jpg" alt=" " class="car-img"></div>
+					<div class="div-car-info">
+						<div class="div-car-head">
+							<h3>2021 Chevrolet Corvette 3LT</h3>
+							<p class="price">$93,997</p>
+						</div>
+						<table class="tbl-description">
+							<tr>
+								<td>Color:</td>
+								<td>Blue</td>
+							</tr>
+							<tr>
+								<td>Drive:</td>
+								<td>RWD</td>
+							</tr>
+							<tr>
+								<td>Transmission:</td>
+								<td>Automatic</td>
+							</tr>
+							<tr>
+								<td>Mileage:</td>
+								<td>2,063</td>
+							</tr>
+						</table>
+						<div class="div-car-btn">
+							<a href="payment.html#m-price=93997"><p class="p-loan">Calculate Monthly Payment</p></a>
+							<a href="2021 Chevrolet Corvette 3LT.html"><button class="btn-car btn-info">More Information</button></a>
+							<button class="btn-car btn-ask" onClick="openAvail('2021 Chevrolet Corvette 3LT', 'Check Availability')">Ask For Availability</button>
+						</div>
+					</div>
+				</div>
+		</div>
+		<div id="div-empty">
+				<h4>No results found</h4>
+				<p>It looks like we have no cars that fit your criteria.</p>
+				<p>Please widen your search</p>
+			</div>
+	</div>
+	<hr id="hide">
+	
+    <!-- InstanceEndEditable -->
+	<!-- InstanceBeginEditable name="EditRegion4" -->
+    
+	
+	
+    <!-- InstanceEndEditable -->
+	<!-- InstanceBeginEditable name="EditRegion5" -->
+    
+	
+	
+    <!-- InstanceEndEditable --><br>
+	<br>
+	<footer class="accent">
+			<br>
+		<div id="footer">
+			<div class="column left">
+				<table id="tbl-hours">
+					<tr>
+						<td colspan="2" class="tbl-head">Hours of Operation</td>
+					</tr>
+					<tr>
+						<td class="day">Monday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Tuesday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Wednesday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Thursday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Friday</td>
+						<td class="time">8:00 AM - 8:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Saturday</td>
+						<td class="time">9:00 AM - 7:00 PM</td>
+					</tr>
+					<tr>
+						<td class="day">Sunday</td>
+						<td class="time">CLOSED</td>
+					</tr>
+				</table>
+			</div>
+			<div class="column middle">
+				<br>
+				<a href="index.html"><img src="images/Webpage%20Files/Logo_Transparent_4.png" alt="logo" class="logo-foot"></a>
+			</div>
+			<div class="column right">
+				<address>
+					<h4>Address</h4>
+					<p>1234 N. 8th St</p>
+					<p>Goddard, KS 67235</p>
+					<p><a href="tel:+13165551234">(316)-555-1234</a></p>
+					<p><a href="mailto:2010144@student.goddardusd.com">2010144@student.goddardusd.com</a></p>
+				</address>
+			</div>
+		</div>
+			<br>
+			<hr>
+		<div class="foot-links">
+			<a href="index.html" class="btm-link">Home</a>
+			<a href="inventory.html" class="btm-link">Inventory</a>
+			<a href="sell.html" class="btm-link">Trade In</a>
+			<a href="about.html" class="btm-link-end">About Us</a>
+		</div>
+		<br>
+		<p class="p-trm">created by Grace Kallman (00074297) and Allison Banks (00047363)</p>
+	</footer>
+    <script src="script.js" type="text/javascript"></script>
+	
+</body>
+<!-- InstanceEnd --></html>

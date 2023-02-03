@@ -1,0 +1,1124 @@
+@charset "utf-8";
+/* CSS Document */
+/*!color*/
+body {
+	background-color: rgb(60,60,60);
+	color: white;
+	font-family: "Signika Negative", "Bree", "sans-serif";
+	margin: 0px;
+}
+
+.stopscrolling {
+	overflow: hidden;
+}
+
+/*!color*/
+.accent {
+	background-color: #3E8989;
+}
+
+/*nav------------------------------------------------------------------------------------------*/
+
+#navreg {
+	font-size: 17px;
+}
+
+#navsm {
+	font-size: 17px;
+	text-align: left;
+}
+
+/*!color*/
+nav {
+    height: 80px;
+	line-height: 80px;
+    color: white;
+    text-align: right;
+	width: 100%;
+	position: fixed;
+	display: inline-block;
+	z-index: 5;
+}
+
+#div-navsm-list {
+	height: 100vh;
+	width: 100vw;
+	display: none;
+	transition: margin-left 1s;
+}
+
+#navsm-img {
+	content: url("images/Webpage Files/lines.png");
+	background-size: cover;
+	max-height: 50%;
+	max-width: 50%;
+	vertical-align: middle;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.navsm-list li {
+	margin-bottom: 0px;
+	list-style: none;
+	margin-left: -40px;
+	padding-left: 40px;
+}
+
+ul {
+	margin: 0;
+}
+
+ul.nav-list a li {
+    display: inline-block;
+	height: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/*!color*/
+ul.nav-list a li:hover, .active {
+	background-color: #007777;
+}
+
+/*!color*/
+a {
+    color: white;
+	text-decoration-line: none;
+}
+
+.logo-nav {
+	height: 100%;
+	float: left;
+	padding-left: 40px;
+}
+
+/*small screen*/
+@media (max-width:800px){
+	#navreg {
+		display: none;
+	}
+	
+	#navsm {
+		display: block;
+	}
+	
+	.middle > a {
+		display: none;
+	}
+	
+	.left, .right {
+		width: 40% !important;
+	}
+	
+	button {
+		font-size: 1em !important;
+		margin-left: 10px !important;
+		margin-right: 10px !important;
+		width: 30% !important;
+	}
+	
+	.submit {
+		width: 50% !important;
+	}
+	
+	.submitplus {
+		width: 80% !important;
+	}
+	
+	.search-list > a {
+		display: block;
+		margin-bottom: 12px;
+	}
+	
+	#div-image4 {
+		background-position: 50% 0 !important;
+	}
+	
+	.row {
+		display: block !important;
+		width: 70vw;
+		margin-bottom: 0 !important;
+	}
+	
+	.staffitem {
+		width: 100% !important;
+		margin-bottom: 50px;
+	}
+	
+	.staffimg {
+		width: 50% !important;
+	}
+	
+	#div-carlist {
+		width: 90vw !important;
+	}
+	
+	.div-car-img {
+		display: none !important;
+	}
+	
+	.div-car-info {
+		width: 90% !important;
+		text-align: center;
+	}
+	
+	.btn-car {
+		font-size: .75em !important;
+	}
+	
+	.div-filter {
+		display: none;
+		width: 100vw !important;
+		height: calc(100vh - 140px);
+		margin-left: -5% !important;
+		position: fixed;
+		overflow-y: scroll;
+		box-shadow: -100px 0 goldenrod;
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, goldenrod 5%);
+	}
+	
+	.div-openfilter {
+		width: 30%;
+		float: left;
+	}
+	
+	#open-filter {
+		color: black;
+		background-color: goldenrod;
+		padding: 5px 15px;
+		border-radius: 5px;
+		cursor: pointer;
+		user-select: none;
+	}
+	
+	#clear-filter {
+		display: none;
+	}
+	
+	.seemore {
+		font-size: 1.8em !important;
+		margin-right: 5px !important;
+	}
+	
+	.div-table {
+		display: inline-block !important;
+	}
+	
+	.tbl-carinfo {
+		width: 100% !important;
+		display: inline;
+		float: left;
+	}
+	
+	.tbl-carinfo tr {
+	}
+	
+	.aside-carinfo {
+		position: relative;
+		left: 5px;
+		margin-top: -35px;
+	}
+	
+	.btn-carinfo {
+		width: 100% !important;
+		font-size: .8em !important;
+	}
+	
+	.address-carpage {
+		color: rgb(200,200,200);
+	}
+}
+
+@media (max-width:535px) {
+	.tbl-description {
+		display: none;
+	}
+	
+	.div-car-btn {
+		width: 100% !important;
+	}
+}
+
+@media (max-width:467px) {
+	.aside-carinfo {
+		position: relative;
+		right: 5px;
+		margin-top: -150px;
+	}
+}
+
+
+
+@media (min-width:801px) and (max-width:1020px){
+	.btn-ask {
+		display: none;
+	}
+	
+	.btn-car {
+		width: 50% !important;
+		font-size: .7em;
+		overflow-wrap: break-word;
+		height: 50% !important;
+	}
+	
+	.div-car-btn {
+		width: 40% !important;
+	}
+}
+
+/*big screen*/
+@media (min-width:801px){
+	#navreg {
+		display: block;
+	}
+	
+	#navsm {
+		display: none;
+	}
+	
+	.div-openfilter {
+		display: none;
+	}
+}
+
+/*head images & buttons---------------------------------------------------------------------------------------*/
+
+#div-image {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	width: 100%;
+	height: 500px;
+	background-image: url("images/Webpage Files/300 Limited Front.jpg");
+	background-size: cover;
+	background-position: 0 15%;
+	position: relative;
+}
+
+#div-image2 {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	width: 100%;
+	height: 350px;
+	background-image: url("images/Webpage Files/Corvette Side.jpg");
+	background-size: cover;
+	background-position: 0 55%;
+	position: relative;
+}
+
+#div-image3 {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	width: 100%;
+	height: 400px;
+	background-image: url("images/Webpage Files/F150 Dash.jpg");
+	background-size: cover;
+	background-position: 0 55%;
+	position: relative;
+}
+
+#div-image4 {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	width: 100%;
+	height: 500px;
+	background-image: url("images/Webpage Files/Silverado Front.jpg");
+	background-size: cover;
+	background-position: 0 15%;
+	position: relative;
+}
+
+/*!color*/
+h2 {
+	text-align: right;
+	font-size: 5em;
+	font-variant-caps: small-caps;
+	color: white;
+	margin-right: 5%;
+	margin-top: 3%;
+	padding-right: 8px;
+	padding-left: 120px;
+	font-family: "Montserrat", "Corbel Light", "Microsoft JhengHei Light", "Microsoft YaHei Light", "Bahnschrift Light", "serif";
+	background-color: rgba(0,0,0,0.50);
+	float: right;
+}
+
+#div-btn {
+	height: 120px;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	align-content: space-between;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+}
+
+/*!color*/
+button {
+	width: 16.667%;
+	height: 60px;
+	margin-left: 50px;
+	margin-right: 50px;
+	border-radius: 8px;
+	font-variant-caps: small-caps;
+	border: 3px darkgoldenrod solid;
+	color: rgb(30,30,30);
+	background-color: goldenrod;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+
+/*text-------------------------------------------------------------------------------------------------*/
+
+#div-p {
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1 {
+	text-align: center;
+	font-size: 2.75em;
+	font-variant-caps: small-caps;
+}
+
+p {
+	font-family: "Sofia Sans","Gill Sans MT", "sans-serif";
+	font-size: 1.15em;
+}
+
+h5 {
+	font-size: 1.5em;
+	margin: 0;
+	padding: 0;
+}
+
+/*search-------------------------------------------------------------------------------------------------------*/
+
+#div-search {
+	width: 90%;
+	margin: auto;
+}
+
+.search-list {
+	text-align: center;
+}
+
+/*!color*/
+ul.search-list a li {
+    display: inline-block;
+	height: 100%;
+	padding: 10px 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+    color: rgb(30,30,30);
+	font-size: 1em;
+	background-color: goldenrod;
+	border-radius: 10px;
+	line-height: 15px;
+	font-weight: bolder;
+}
+
+/*form--------------------------------------------------------------------------------------------------*/
+
+#div-form {
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#form-contact {
+	text-align: center;
+}
+
+.form-money {
+	text-align: center;
+}
+
+label {
+	display: inline-block;
+	text-align: left;
+	margin-left: 2.3%;
+	margin-right: 2.3%;
+	margin-bottom: 5px;
+}
+
+input {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.div-consent {
+	margin: auto;
+	width: 85%;
+	display: flex;
+	align-content: space-around;
+}
+
+label[for="consent"] {
+	width: 95%;
+	text-align: justify;
+}
+
+label[for="comments"] {
+	width: 73%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#comments {
+	width: 73%;
+	height: 100px;
+}
+
+.half {
+	width: 33.5%; /*75*/
+}
+
+.third {
+	width: 20.667%; /* 21% */
+}
+
+.halfplus {
+	width: 45%;
+	display: inline-block;
+}
+
+/*!color*/
+.submit {
+	width: 15%;
+	height: 50px;
+	border-radius: 6px;
+	border: medium darkgoldenrod solid;
+	color: rgb(30,30,30);
+	background-color: goldenrod;
+	font-size: 1.2em;
+	font-family: "Montserrat", "Corbel Light", "Microsoft JhengHei Light", "Microsoft YaHei Light", "Bahnschrift Light", "serif";
+	font-weight: bolder;
+	cursor: pointer;
+}
+
+.submitplus {
+	width: 35%;
+}
+
+/*!color*/
+#left-form {
+	border-right: 6px solid #3E8989;
+}
+
+#right-form {
+	border-left: 6px solid #3E8989;
+}
+
+/*inventory--------------------------------------------------------------------------------------------------*/
+
+#div-aboveInv {
+	width: 90%;
+	height: 30px;
+	margin-top: 90px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*!color*/
+#sortby {
+	float: right;
+	margin-right: 25px;
+	outline: thin solid gray;
+	background-color: goldenrod;
+	color: rgb(20,20,20);
+	height: 30px;
+	width: 180px;
+	font-family: "Signika Negative", "Bree", "sans-serif";
+	font-size: 1.2em;
+}
+
+/*!color*/
+option {
+	background-color: rgb(50,50,50);
+	color: white;
+	border: thick black solid;
+}
+
+#div-inventory {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+#div-carlist {
+	width: 65%;
+	margin: auto 20px auto auto;
+}
+
+/*!color*/
+.caritem {
+	background-color: rgb(30,30,30);
+	color: white;
+	height: 250px;
+	margin-top: 5px;
+	margin-bottom: 25px;
+	border: thin white solid;
+}
+
+.div-car-img {
+	height: 100%;
+	width: 25%;
+	display: inline-block;
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.car-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 20% 15%;
+}
+
+.div-car-info {
+	height: 100%;
+	width: 72%;
+	display: inline-block;
+	margin: auto;
+	float: right;
+}
+
+.div-car-head {
+	height: 30%;
+	width: 100%;
+}
+
+h3 {
+	font-size: 1.5em;
+	float: left;
+	padding-top: auto;
+	padding-bottom: auto;
+	margin-top: 15px;
+	margin-bottom: auto;
+	text-decoration-line: underline;
+}
+
+.price {
+	float: right;
+	padding-top: auto;
+	padding-bottom: auto;
+	margin-top: 15px;
+	margin-bottom: auto;
+	margin-right: 45px;
+	font-size: 1.2em;
+}
+
+.tbl-description{
+	height: 65%;
+	padding-top: auto;
+	padding-bottom: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 40%;
+	float: left;
+}
+
+.tbl-description tr td:first-child {
+	text-align: left;
+}
+
+.tbl-description tr td:nth-child(2) {
+	text-align: right;
+}
+
+.div-car-btn {
+	height: 65%;
+	width: 58%;
+	display: inline;
+	margin: auto;
+	padding: auto;
+	float: right;
+}
+
+/*!color*/
+.p-loan {
+	text-decoration-line: underline;
+	color: white;
+	text-align: center;
+	font-size: 1.1em;
+	margin-top: 0;
+}
+
+/*!color*/
+.btn-car {
+	width: 50%;
+	height: 30%;
+	margin: 3px;
+	margin-right: 25%;
+	margin-left: 25%;
+	border-radius: 8px;
+	font-variant-caps: small-caps;
+	background-color: goldenrod;
+	color: rgb(30,30,30);
+	font-size: 1em;
+	border: none;
+	font-weight: bolder;
+}
+
+#div-empty {
+	width: 100%;
+	text-align: center;
+	display: none;
+}
+
+/*filter----------------------------------------------------------------------------------------------*/
+
+.div-filter {
+	width: 20%;
+	margin-left: 20px;
+	margin-right: auto;
+	float: left;
+}
+
+#div-clear {
+	margin-top: 10px;
+}
+
+#form-filter {
+	width: 100%;
+}
+
+#clear-filter {
+	text-decoration-line: underline;
+	cursor: pointer;
+	float: right;
+}
+
+#det-make {
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+#det-color {
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+summary {
+	font-size: 1.15em;
+}
+
+/*!color*/
+details {
+	cursor: pointer;
+	background-color: goldenrod;
+	padding: 15px;
+	color: rgb(20,20,20);
+}
+
+/*!color*/
+aside > details:not(:last-child) {
+    border-bottom: 2px solid black;
+	
+}
+
+.div-checkboxes {
+	padding-top: 10px;
+}
+
+.lbl-checkbox {
+	padding-bottom: 10px;
+}
+
+#hide {
+	width: 90%;
+	visibility: hidden;
+}
+
+/*---staff-------------------------------------------------------------------------------------------*/
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+#div-stafflist {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.staffimg {
+    height: 100%;
+	width: 40%;
+}
+
+.staffimg img {
+	object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.staffinfo {
+	float: right;
+}
+
+.staffinfo, .staffimg {
+	display: inline-block;
+	vertical-align: top;
+	height: 200px;
+}
+
+.staffp {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+/*car page--------------------------------------------------------------------------------------------*/
+
+#div-carimgs {
+	width: 100%;
+	height: 350px;
+	margin-top: 40px;
+	box-shadow: 0px 5px 4px rgb(30,30,30);
+	z-index: 3;
+}
+
+#div-carimg-main {
+	width: 70%;
+	height: 100%;
+	background-image: url("images/Webpage Files/300 Limited Front.jpg");
+	background-size: cover;
+	background-position: 0 15%;
+	position: relative;
+	float: left;
+}
+
+#div-carimg-side {
+	width: 30%;
+	height: 50%;
+	background-image: url("images/Webpage Files/300 Limited Side.jpg");
+	background-size: cover;
+	background-position: 0 60%;
+	position: relative;
+	float: right;
+	z-index: 2;
+	box-shadow: 1px 5px 4px rgb(30,30,30);
+}
+
+#div-carimg-rest {
+	width: 30%;
+	height: 50%;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/Webpage Files/300 Limited Back.jpg");
+	background-size: cover;
+	background-position: 0 60%;
+	position: relative;
+	float: right;
+	cursor: pointer;
+}
+
+.cx30-m {
+	background-image: url("images/Webpage Files/CX30 Front.jpg") !important;
+}
+
+.cx30-s {
+	background-image: url("images/Webpage Files/CX30 Side.jpg") !important;
+}
+
+.cx30-r {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/Webpage Files/CX30 Back.jpg") !important;
+}
+
+.f150-m {
+	background-image: url("images/Webpage Files/F150 Front.jpg") !important;
+}
+
+.f150-s {
+	background-image: url("images/Webpage Files/F150 Side.jpg") !important;
+}
+
+.f150-r {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/Webpage Files/F150 Back.jpg") !important;
+}
+
+.silv-m {
+	background-image: url("images/Webpage Files/Silverado Front.jpg") !important;
+}
+
+.silv-s {
+	background-image: url("images/Webpage Files/Silverado Side.jpg") !important;
+}
+
+.silv-r {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/Webpage Files/Silverado Back.jpg") !important;
+}
+
+.crv-m {
+	background-image: url("images/Webpage Files/Corvette Front.jpg") !important;
+}
+
+.crv-s {
+	background-image: url("images/Webpage Files/Corvette Side.jpg") !important;
+}
+
+.crv-r {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/Webpage Files/Corvette Back.jpg") !important;
+}
+
+.seemore {
+	text-align: right;
+	font-size: 3em;
+	font-variant-caps: small-caps;
+	color: white;
+	margin: 15px 0 0 30px;
+	padding: 0;
+	font-family: "Montserrat", "Corbel Light", "Microsoft JhengHei Light", "Microsoft YaHei Light", "Bahnschrift Light", "serif";
+	background-color: rgba(0,0,0,0);
+	float: left;
+	text-decoration-line: underline;
+}
+
+#div-carinfo {
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.div-header {
+	width: 100%;
+	height: 80px;
+}
+
+.center {
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+.inv {
+	color: rgba(0,0,0,0)
+}
+
+#lblemail {
+	margin-top: 20%;
+}
+
+#div-avform {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 30;
+	margin-left: auto;
+	margin-right: auto;
+	aspect-ratio: 3/2;
+	width: 40%;
+}
+
+#div-galleryholder, #div-available {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+}
+
+#div-black, #div-dark {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.9);
+}
+
+#div-gallery {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 30;
+	margin-left: auto;
+	margin-right: auto;
+	aspect-ratio: 3/2;
+	width: 60%;
+	background-image: url("images/Webpage Files/300 Limited Front.jpg");
+	background-size: cover;
+}
+
+.arrow {
+	height: 100%;
+	width: 10%;
+	vertical-align: middle;
+	background-color: rgba(30,30,30,.5);
+	font-size: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	user-select: none;
+	z-index: 25;
+}
+
+#left-arrow {
+	float: left;
+}
+
+#right-arrow {
+	float: right;
+}
+
+.back {
+	width: 30px;
+	height: 30px;
+	float: left;
+	position: fixed;
+	margin-top: -10px;
+	margin-left: -10px;
+	background-color: #3E8989;
+	font-size: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	user-select: none;
+}
+
+.hleft {
+	float: left;
+	margin-bottom: 10px;
+	text-decoration-line: underline;
+}
+
+.hright {
+	float: right;
+	font-size: 1.5em;
+	font-family: "Sofia Sans";
+	font-weight: lighter;
+}
+
+.tbl-carinfo {
+	margin-right: 15px;
+	width: 40%;
+	float: left;
+}
+
+.tbl-carinfo tr td:nth-child(2) {
+	text-align: right;
+}
+
+.div-table {
+	width: 70%;
+	display: inline-block;
+}
+
+.aside-carinfo {
+	width: 25%;
+	display: inline-block;
+	margin-right: 15px;
+	float: right;
+	height: 250px;
+}
+
+.btn-carinfo {
+	width: 100%;
+	height: 20%;
+	font-size: 1.2em;
+	margin: 0 0 10px 0;
+}
+
+.div-features {
+	width: 60%;
+}
+
+/*footer-----------------------------------------------------------------------------------------------*/
+
+/*!color*/
+#footer {
+	color: white;
+	align-content: space-around;
+	justify-content: center;
+	display: flex;
+	width: 80%;
+	margin: auto;
+}
+
+.column {
+	text-align: left;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+.left, .right {
+	width: 30%;
+}
+
+.middle {
+	width: 30%
+}
+
+#tbl-hours {
+	width: 100%;
+}
+
+.tbl-head {
+	width: 100%;
+	text-align: center;
+	font-size: 1.5em;
+	font-variant-caps: small-caps;
+}
+
+td {
+	width: 50%;
+}
+
+.day {
+	text-align: left;
+}
+
+.time {
+	text-align: right;
+}
+
+h4 {
+	font-size: 1.25em;
+	margin-top: 5px;
+}
+
+address > p {
+	overflow-wrap: break-word;
+}
+
+.logo-foot {
+	width: 100%;
+}
+
+/*!color*/
+hr {
+	width: 55%;
+	color: white;
+}
+
+.foot-links {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
+.btm-link, .btm-link-end {
+	text-decoration-line: underline;
+}
+
+.btm-link::after {
+	content: " | ";
+}
+
+.p-trm {
+	margin-left: 20px;
+	font-size: .8em;
+}
