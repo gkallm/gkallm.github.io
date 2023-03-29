@@ -734,7 +734,7 @@ aside > details:not(:last-child) {
 	padding-bottom: 10px;
 }
 
-input[type=number] {
+.min, .max {
 	width: 70%;
 }
 
