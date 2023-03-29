@@ -298,6 +298,7 @@ function sendAvail() {
 	const email = document.getElementById("inemail");
 	const car = document.getElementById("p-avail-for");
 	const todo = document.getElementById("p-avail-to");
+	const background = document.getElementById("div-available");
 
 	const request = new XMLHttpRequest();
 	let wurl = "https://discord.com/api/webhooks/1070553535583883394/98I-QXmc7UNiEju4j2dfFNJYKRcvbx5BvioTVnbetEOBBp5viYAS4eshXVam6EpPFhV6H";
@@ -313,6 +314,8 @@ function sendAvail() {
 	}));
 	
 	alert("Your message has been sent!");
+	
+	background.style.display = "none";
 }
 
 function openList() {
