@@ -734,6 +734,10 @@ aside > details:not(:last-child) {
 	padding-bottom: 10px;
 }
 
+input[type=number] {
+	width: 70%;
+}
+
 #hide {
 	width: 90%;
 	visibility: hidden;
